@@ -44,10 +44,10 @@ jobs:
 #      run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
     - name: 更新 feeds
-      run: cd openwrt && ./scripts/feeds update -a
+      run: ./scripts/feeds update -a
 
     - name: 安装 feeds
-      run: cd openwrt && ./scripts/feeds install -a
+      run: ./scripts/feeds install -a
 
     - name: Load custom configuration
       env:
